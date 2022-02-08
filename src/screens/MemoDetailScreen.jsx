@@ -1,5 +1,4 @@
-import { StyleSheet, View, Text } from 'react-native';
-import { ScrollView } from 'react-native-web';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 
 import AppBar from '../components/AppBar';
 import CircleButton from '../components/CircleButton';

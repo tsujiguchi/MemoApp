@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { string, shape } from 'prop-types';
+import { Entypo } from '@expo/vector-icons';
 
 export default function CircleButton(props) {
   const { children, style } = props;
   return (
     <View style={[styles.circleButton, style]}>
-      <Text style={styles.circleButtonLable}>{ children }</Text>
+      <Entypo name="plus" size={32} color="white" />
     </View>
   );
 }
