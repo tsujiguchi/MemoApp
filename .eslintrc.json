@@ -20,6 +20,9 @@
     "rules": {
       "no-use-before-define": 0,
       "react/prop-types": ["error", { "ignore": ["navigation"] }],
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-no-bind": [{
+        "allowFunctions": true
+      }]
     }
 }

@@ -4,8 +4,25 @@ import {
 import CircleButton from '../components/CircleButton';
 import KeyboardSafeView from '../components/KeyBoardSafeView';
 
+import firebase from 'firebase';
+
 export default function MemoCreateScreen(props) {
   const { navigation } = props;
+
+  function handlePress() {
+    const db = firebase.firestore();
+    const ref = db.collection('memos');
+    ref.add({
+      bodyText: 'Hello',
+    })
+      .then((docRef) => {
+        console.log("Created!", docRef.id);
+        navigation.goBack();
+      })
+      .catch((error) => {
+        console.log('Error!', error)
+      });
+  }
   return (
     <KeyboardSafeView style={styles.container}>
       <View style={styles.inputContainer}>
@@ -13,7 +30,7 @@ export default function MemoCreateScreen(props) {
       </View>
       <CircleButton
         name="check"
-        onPress={() => { navigation.goBack(); }}
+        onPress={handlePress}
       />
     </KeyboardSafeView>
   );
