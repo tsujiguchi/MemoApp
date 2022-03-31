@@ -23,6 +23,7 @@
       "react/react-in-jsx-scope": "off",
       "react/jsx-no-bind": [{
         "allowFunctions": true
-      }]
+      }],
+      "import/prefer-default-export": 0
     }
 }
